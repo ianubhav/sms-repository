@@ -7,8 +7,6 @@ exclude_regex = 'statement|declined|received|credited|stmt|otp|debit'
 
 last_digits_regex = '(?:ending\s|(?:x*))*(\d{4})'
 
-a = json.load(open('messages.json','r'))
-
 rupees_regex = '(?:rs\.?|inr)\s*(\d+(?:[.,]\d+)*)'
 
 date_regex = '(\d{4}-\d{2}-\d{2})|(\d{2}/\d{2}/\d{2})'
