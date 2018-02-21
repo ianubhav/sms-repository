@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Credit Card Sms Data</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10-dev/js/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/f3e99a6c02/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+  <h1 align="center">Credit Card Sms Data</h1>
+  <div class="container">
+    <div class="row">
+        <label for="file">Select a file</label>
+        <input id = "filedata" name="json_file" type="file">
+        <br>
+        <button class="btn btn btn-primary" id="upload-file-btn" disabled>Upload</button>
+    </div>
+    <br>
+    <div class="row">
+        <div class = "search_table">
+          <table id = "search" class="table table-hover table-bordered search">
+          <thead>
+            <tr>
+              <th class="col-md-2 col-xs-2">S. No.</th>
+              <th class="col-md-2 col-xs-2">Sender ID</th>
+              <th class="col-md-2 col-xs-2">Credit Card Number</th>
+              <th class="col-md-2 col-xs-2">Amount</th>
+              <th class="col-md-2 col-xs-2">Transaction Date Time</th>
+              <th class="col-md-2 col-xs-2">SMS Receive Date Time</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        </div>
+    </div>
+  </div>
+</body>
+<script src="static/index.js"></script>
+</html>
