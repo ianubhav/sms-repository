@@ -3,17 +3,8 @@ $(document).ready(function() {
    var search_table = $('#search').DataTable({
       "searching": false,
       "ordering": false,
+      "autoWidth": true
       });
-
-   // $( ".go-button" ).click(function() {
-
-   //  value = $('.search-text').val()
-
-   //  search_table.clear().draw()
-
-   //  if (value.length == 0) {
-   //    return
-   //  }
 
     $(function() {
         $('#upload-file-btn').click(function() {

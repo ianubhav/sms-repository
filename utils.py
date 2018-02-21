@@ -24,19 +24,19 @@ def timestamp_parse(text):
 
 	time = re.search(time_regex, text)
 
-	if time is None:
-		time = '00:00:00'
+	if not time is None:
+		datetime = date + ' ' + time.group(1)
+		strftime = '%d-%b-%Y %H:%M%p'
 	else:
-		time = time.group(1)
-
-	datetime = date + ' ' + time
+		datetime = date
+		strftime = '%d-%b-%Y'
 
 	if '/' in datetime:
 		dayfirst = True
 	else:
 		dayfirst = False
 
-	datetime = parse(datetime,dayfirst=dayfirst).strftime('%d-%b-%Y %H:%M%p')
+	datetime = parse(datetime,dayfirst=dayfirst).strftime(strftime)
 
 	return datetime
 
@@ -75,9 +75,6 @@ def parse_json_msg(msg_dict):
 		data_map['last_digits'] = last_digits
 
 		transaction_time = timestamp_parse(text)
-
-		if transaction_time is None:
-			continue
 
 		data_map['transaction_time'] = transaction_time
 
